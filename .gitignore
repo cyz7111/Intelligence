@@ -1,0 +1,21 @@
+# dependencies  npm包文件夹
+/node_modules
+
+# production  打包文件夹
+/dist
+
+# misc Mac OS X用来存储 默认情况下，Mac OS X下的每个文件夹下应该都会生成一个，包括网络介质存储盘和U盘这样的外部设备
+.DS_Store
+
+# 显示npm i 报错信息
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 过滤所有指定类型文件
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
