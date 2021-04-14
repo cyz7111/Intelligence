@@ -35,6 +35,7 @@ module.exports = {
       {
         test: /\.vue$/i,
         loader: "vue-loader",
+        
       },
       {
         test: /\.css$/i,
@@ -44,7 +45,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "static/[hash][ext][query]",
+          filename: "static/img/[hash][ext][query]",
         },
         //npm run serve时不管用
         // use: [
@@ -56,6 +57,10 @@ module.exports = {
         //     },
         //   },
         // ],
+      },
+      {
+        test:/\.(jsx|js)$/i,
+        use:'babel-loader'
       },
       // {
       //   test: /\.svg$/i,
