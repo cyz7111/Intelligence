@@ -35,7 +35,6 @@ module.exports = {
       {
         test: /\.vue$/i,
         loader: "vue-loader",
-        
       },
       {
         test: /\.css$/i,
@@ -62,6 +61,12 @@ module.exports = {
         test:/\.(jsx|js)$/i,
         use:'babel-loader'
       },
+      {
+        test: /\.tsx?$/,
+        // ts-loader是官方提供的处理tsx的文件
+        use: 'ts-loader',
+        exclude: /node_modules/
+       },
       // {
       //   test: /\.svg$/i,
       //   use: [
@@ -150,7 +155,7 @@ module.exports = {
     //静态资源
     // contentBase:path.join(__dirname, 'assets'),
     //运行后打开默认浏览器
-    open: true,
+    // open: true,
     //热模块替换
     hot: true,
     //默认打开的页面
