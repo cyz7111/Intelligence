@@ -19,11 +19,11 @@ module.exports = {
   //环境
   mode: "development",
   //入口
-  entry: path.join(__dirname, "src/main.js"),
+  entry: path.join(__dirname, "../src/main.js"),
   //出口
   output: {
     filename: "index.js",
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "../dist"),
     //加载外部资源
     // publicPath:path.join(__dirname, "dist/static"),
     // clean: true,
@@ -108,7 +108,7 @@ module.exports = {
       //在 dist/index.html 的输出，并自动引入index.js
       filename: "index.html",
       //模板来源
-      template: path.join(__dirname, "public/index.html"),
+      template: path.join(__dirname, "../public/index.html"),
       minify: {
         // 压缩HTML文件
         removeComments: true, // 移除HTML中的注释
@@ -118,7 +118,7 @@ module.exports = {
       //将js文件放在body底部:true默认值,body,head,false不插入生成的 js 文件，只是单纯的生成一个 html 文件
       inject: true,
       //浏览器图标
-      favicon: path.join(__dirname, "public/favicon.ico"),
+      favicon: path.join(__dirname, "../public/favicon.ico"),
       //chunk仅会将数组中指定的 js 引入到 html 文件中
       // chunk:['']
     }),
@@ -143,13 +143,13 @@ module.exports = {
     //路径代理简写
     alias: {
       //多个的话用数组
-      "@": path.join(__dirname, "src"),
+      "@": path.join(__dirname, "../src"),
     },
   },
   //服务器----实时热更新
   devServer: {
     // index: 'index.html',
-    contentBase: "./dist",
+    contentBase: "../dist",
     port: port,
     host: "localhost",
     //静态资源
